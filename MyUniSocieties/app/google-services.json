@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1050667651945",
+    "project_id": "myunisocieties",
+    "storage_bucket": "myunisocieties.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050667651945:android:d1002f598e42a124aee3f8",
+        "android_client_info": {
+          "package_name": "com.example.myunisocieties"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBqhCH18DHknAkUAjf86CRWzsJBmkaLyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
