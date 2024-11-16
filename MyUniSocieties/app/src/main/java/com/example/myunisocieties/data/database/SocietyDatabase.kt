@@ -19,18 +19,22 @@ package com.example.inventory.data
 import androidx.room.Database
 import androidx.room.RoomDatabase
 
+
 @Database(entities = [Society::class], version = 1, exportSchema = false)
-abstract class AppDatabase : RoomDatabase() {
-    abstract fun societyDao(): SocietyDao
+abstract class SocietyDatabase : RoomDatabase() {
 
-    val society = Society(name = "Engineering Society", description = "A place for engineering enthusiasts.", contactEmail = "engsoc@college.edu", category = "Engineering", isActive = true)
-    societyDao.insertSociety(society)
+    abstract fun SocietyDao(): SocietyDao
 
-    val activeSocieties = societyDao.getActiveSocieties()
+    companion object {
+        @Volatile
+        private var Instance: SocietyDatabase? = null
 
-    val updatedSociety = society.copy(description = "Updated description")
-    societyDao.updateSociety(updatedSociety)
-
-
+        fun getDatabase(context: Context): SocietyDatabase {
+            // if the Instance is not null, return it, otherwise create a new database instance.
+            return Instance ?: synchronized(this) {
+                Room.databaseBuilder(context, SocietyDatabase::class.java, "society_database")
+                    .build().also { Instance = it }
+            }
+        }
+    }
 }
-
