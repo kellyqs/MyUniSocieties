@@ -1,4 +1,5 @@
-MyUniSocieties App 🎉
+MyUniSocieties App 
+
 Welcome to MyUniSocieties
 This app is all about helping students find fun and interesting clubs and societies at college. 
 Whether you're into movies, engineering, anime, or meeting friends from around the world and sharing your culture with them, this app is here to make it easy for you to discover and join societies!
