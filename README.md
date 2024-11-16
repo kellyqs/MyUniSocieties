@@ -35,8 +35,8 @@ Open the project in Android Studio.
 Click on Sync Now to link everything up with Gradle.
 Run the app on a phone or emulator by clicking Run > Run 'app'.
 
-How We Made It 🔨
-We used a structure to keep things simple and organized. Here’s a breakdown:
+How I Made The Application
+I used a folder/package structure to keep things simple and organized. Here’s a breakdown:
 Data Folder:
 The data folder is responsible for handling everything related to data in the app, like databases and models.
   1.dao: Contains methods for accessing and managing data in the Room database.
