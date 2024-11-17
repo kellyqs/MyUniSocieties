@@ -16,7 +16,13 @@ import com.example.faa.ui.ui.home.SettingsScreen
 fun NavigationGraph(navController: NavHostController, paddingValues: PaddingValues) {
     NavHost(navController, startDestination = "home") {
         composable("home") { HomeScreen(navController) }
-        composable("societies") { ProfileScreen(navController) }
+        composable("societyList") { ProfileScreen(navController) }
+        composable("filmSoc") { filmSociety(navController) }
+        composable("animeSoc") { animeSociety(navController) }
+        composable("engineeringSoc") { engineeringSociety(navController) }
+        composable("internationalSoc") { internationalSociety(navController) }
+        composable("login") { Login(navController) }
+        composable("signUp") { SignUp(navController) }
         composable("settings") { SettingsScreen(navController) }
     }
 }

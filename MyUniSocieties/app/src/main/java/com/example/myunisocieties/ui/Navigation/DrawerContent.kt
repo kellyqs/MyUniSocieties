@@ -38,6 +38,27 @@ fun DrawerContent(navController: NavHostController, drawerState: DrawerState) {
             Text("societies")
         }
 
+
+        // Societies List item
+        TextButton(onClick = {
+            coroutineScope.launch {
+                drawerState.close()  // Close the drawer first
+                navController.navigate("login")  // Then navigate to profile
+            }
+        }) {
+            Text("login")
+        }
+
+        // Societies List item
+        TextButton(onClick = {
+            coroutineScope.launch {
+                drawerState.close()  // Close the drawer first
+                navController.navigate("signUp")  // Then navigate to profile
+            }
+        }) {
+            Text("signUp")
+        }
+
         // Settings item
         TextButton(onClick = {
             coroutineScope.launch {
