@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.inventory.data
+package com.example.myunisocieties.database.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -22,12 +22,13 @@ import androidx.room.PrimaryKey
 /**
  * Entity data class represents a single row in the database.
  */
-@Entity(tableName = "society_table")
+@Entity(tableName = "society")
 data class Society(
-    @PrimaryKey(autoGenerate = true) val societyId: Int = 0,
+    @PrimaryKey(autoGenerate = true)
+    var id: Int = 0,
     val name: String,
     val description: String,
     val contactEmail: String,
-    val category: String, // e.g., "Engineering", "Film", "Anime", "International"
+    val category: Category = Category.FilmSociety, // e.g., "Engineering", "Film", "Anime", "International"
     val isActive: Boolean // whether the society is currently active
 )

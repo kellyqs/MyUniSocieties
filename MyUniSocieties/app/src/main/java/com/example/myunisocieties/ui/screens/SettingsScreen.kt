@@ -1,4 +1,4 @@
-package com.example.my3pageapp.screen
+package com.example.myunisocieties.ui.screens
 
 
 import androidx.navigation.NavHostController

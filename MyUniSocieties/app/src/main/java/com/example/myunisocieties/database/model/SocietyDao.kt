@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.inventory.data
+package com.example.myunisocieties.database.model
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -39,18 +39,18 @@ interface SocietyDao {
     suspend fun deleteSociety(society: Society)
 
     // Retrieve a specific society by its ID
-    @Query("SELECT * FROM society_table WHERE societyId = :id")
+    @Query("SELECT * FROM society WHERE id = :id")
     suspend fun getSocietyById(id: Int): Society?
 
     // Retrieve all societies ordered by name
-    @Query("SELECT * FROM society_table ORDER BY name ASC")
+    @Query("SELECT * FROM society ORDER BY name ASC")
     suspend fun getAllSocieties(): List<Society>
 
     // Retrieve societies by category (e.g., "Engineering", "Film")
-    @Query("SELECT * FROM society_table WHERE category = :category ORDER BY name ASC")
+    @Query("SELECT * FROM society WHERE category = :category ORDER BY name ASC")
     suspend fun getSocietiesByCategory(category: String): List<Society>
 
     // Retrieve only active societies
-    @Query("SELECT * FROM society_table WHERE isActive = 1 ORDER BY name ASC")
+    @Query("SELECT * FROM society WHERE isActive = 1 ORDER BY name ASC")
     suspend fun getActiveSocieties(): List<Society>
 }

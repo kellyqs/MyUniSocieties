@@ -1,3 +1,7 @@
+package com.example.myunisocieties.database.util
+
+import com.example.myunisocieties.database.model.Society
+import kotlinx.coroutines.flow.Flow
 
 /**
  * Repository that provides insert, update, delete, and retrieve of [Society] from a given data source.

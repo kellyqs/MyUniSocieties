@@ -16,9 +16,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
-import com.example.a3pageapp.ui.theme.My3pageappTheme
-import com.example.my3pageapp.navigation.DrawerContent
-import com.example.my3pageapp.navigation.NavigationGraph
+import com.example.myunisocieties.ui.Navigation.DrawerContent
+import com.example.myunisocieties.ui.Navigation.NavigationGraph
+import com.example.myunisocieties.ui.theme.MyUniSocietiesTheme
 
 import kotlinx.coroutines.launch
 
@@ -43,7 +43,7 @@ fun MyApp() {
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("My 3 Page App") },
+                    title = { Text("University Societies") },
                     navigationIcon = {
                         IconButton(onClick = {
                             coroutineScope.launch {

@@ -1,4 +1,4 @@
-package com.example.my3pageapp.navigation
+package com.example.myunisocieties.ui.Navigation
 
 
 import androidx.compose.foundation.layout.*
@@ -32,10 +32,18 @@ fun DrawerContent(navController: NavHostController, drawerState: DrawerState) {
         TextButton(onClick = {
             coroutineScope.launch {
                 drawerState.close()  // Close the drawer first
-                navController.navigate("societies")  // Then navigate to profile
+                navController.navigate("societyList")  // Then navigate to profile
             }
         }) {
             Text("societies")
+        }
+        TextButton(onClick = {
+            coroutineScope.launch {
+                drawerState.close()  // Close the drawer first
+                navController.navigate("filmSoc")  // Then navigate to profile
+            }
+        }) {
+            Text("Film Society")
         }
 
 

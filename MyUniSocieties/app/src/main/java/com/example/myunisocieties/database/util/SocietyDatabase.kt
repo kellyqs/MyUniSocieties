@@ -16,8 +16,12 @@
 
 package com.example.inventory.data
 
+import android.content.Context
 import androidx.room.Database
+import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.myunisocieties.database.model.Society
+import com.example.myunisocieties.database.model.SocietyDao
 
 
 @Database(entities = [Society::class], version = 1, exportSchema = false)
